@@ -1,1 +1,56 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{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 }}
+        publish_dir: C:\Users\Ignitiv\Python311 # The directory where your mazegame.html is located
 
